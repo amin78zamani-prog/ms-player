@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#121212">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="M.S Player"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"/>
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="#000000"
+        app:use_controller="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/etVideoUrl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="لینک ویدیو را وارد کنید..."
+            android:textColorHint="#888888"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:backgroundTint="#80D8FF"
+            android:singleLine="true"/>
+
+        <Button
+            android:id="@+id/btnPlayUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="پخش"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="#5a3db8"/>
+    </LinearLayout>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switchSmartMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="حالت بهینه‌ساز انرژی هوشمند"
+        android:textColor="#80D8FF"
+        android:textSize="15sp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="#1E1E1E"
+        app:cardCornerRadius="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/txtBattery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="باتری: --"
+                android:textColor="#E0E0E0"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/txtNetwork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="وضعیت شبکه: --"
+                android:textColor="#E0E0E0"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/txtTraffic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="حجم ترافیک دریافتی: 0 KB"
+                android:textColor="#E0E0E0"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/txtLogStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="فایل ذخیره نشده است"
+                android:textColor="#81C784"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btnExportLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="خروجی گرفتن داده‌های پایان‌نامه (CSV)"
+        android:backgroundTint="#2E7D32"/>
+</LinearLayout>
